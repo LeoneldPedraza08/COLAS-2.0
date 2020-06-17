@@ -2,6 +2,8 @@ package Enunciado;
 
 import java.util.Scanner;
 
+//PEDRAZA MAYHUA LEONELD FABRISSIO
+
 public class Cola {
     
     static Scanner entrada = new Scanner (System.in);
@@ -13,6 +15,7 @@ public class Cola {
     private int[] COLA;
     private int FRENTE;
     private int FINAL;
+    
     public Cola(){
         this.max = 100;
         this.FRENTE = 0;
@@ -27,7 +30,7 @@ public class Cola {
         this.COLA = new int [this.max + 1];
     }
     
-             
+    //Se verifica si la cola esta llena         
     public boolean siestaLlena(){
         if (this.FINAL == this.max){
             return true;
@@ -36,6 +39,7 @@ public class Cola {
         }
     }
     
+    //Se verifica si la cola esta vacio
     public boolean siestaVacio(){
         if(this.FINAL == this.FRENTE){
             return true;
@@ -44,10 +48,12 @@ public class Cola {
         }
     }
     
+    //Insertamos todos los elementos a la cola
     public void insertarCola(){
         if(siestaLlena()){
             System.out.println("La cola esta llena ");
-        }else{            
+        }else{
+
         System.out.println("Ingrese Codigo: ");
         String codigo = entrada.next();
         per.setCodigo(codigo);
@@ -62,7 +68,6 @@ public class Cola {
         per.setHoras(horas);
         
         this.FINAL++;
-        
         }
     }
     
