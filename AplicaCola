@@ -2,6 +2,8 @@ package Enunciado;
 
 import java.util.Scanner;
 
+//PEDRAZA MAYHUA LEONELD FABRISSIO
+
 public class AplicaCola {
 
     static Scanner entrada = new Scanner (System.in);
