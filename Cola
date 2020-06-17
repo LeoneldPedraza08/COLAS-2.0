@@ -60,7 +60,7 @@ public class Cola {
         System.out.println("Ingrese nombre: ");
         String nombre = entrada.next();
         per.setNombre(nombre);
-        System.out.println("Ingrese tarifa: ");
+        System.out.println("Ingrese tarifa: (x hora)");
         int tarifa = entrada.nextInt();
         per.setTarifa(tarifa);
         System.out.println("Ingrese horas: ");
