@@ -1,0 +1,73 @@
+package Enunciado;
+
+import java.util.Scanner;
+
+public class AplicaCola {
+
+    static Scanner entrada = new Scanner (System.in);
+    public static Cola Cola;
+
+    public static void main(String[] args) {
+       
+        menuCola();
+    }
+    
+    static void crearCola(){
+        int tam;
+        System.out.println("Ingrese Tamaño de la Cola : ");
+        tam = entrada.nextInt();
+        Cola = new Cola(tam);
+        System.out.println("Cola creada ...");
+    }
+    
+    public static void menuCola(){
+        int opcion;
+        do{
+            System.out.println("\tMenu de Opciones");
+            System.out.println("================");
+            System.out.println("[1] Crear Cola");
+            System.out.println("=============");
+            System.out.println("[2] Ingresar Datos");
+            System.out.println("[3] Eliminar Datos");
+            System.out.println("[4] Mostrar Cola");
+                                                                        
+            System.out.println("=============");
+            System.out.println("[0] Salir");
+            
+            System.out.println("\nIngrese una opcion : ");
+            opcion = entrada.nextInt();
+            
+            switch (opcion){
+                case 1:
+                    crearCola();
+                break;
+                
+                case 2:
+                    Cola.insertarCola();
+                break;
+                
+                case 3:
+                    Cola.eliminarCola();
+                    System.out.println("");
+                break;
+                
+                case 4:
+                    Cola.mostrarCola();
+                    System.out.println("\n");
+                break;
+                                
+                case 0:
+                    System.out.println("Saliendo del programa...");
+                    System.exit(0);
+                break;
+                
+                default:
+                    System.out.println("Opcion Incorrecta..");
+                    System.out.println("\n");
+            }
+
+        }while(opcion!=0);
+        
+    }
+    
+}
