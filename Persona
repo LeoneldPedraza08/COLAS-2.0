@@ -1,5 +1,7 @@
 package Enunciado;
 
+//PEDRAZA MAYHUA LEONELD FABRISSIO
+
 public class Persona {
     
     private String codigo, nombre;
